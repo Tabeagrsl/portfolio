@@ -5,6 +5,7 @@
 .nav-toggle {
     float: right;
     margin: 10px 20px 10px 10px;
+    cursor: pointer;
 }
 
 .nav-toggle img {
@@ -54,18 +55,6 @@ nav {
     width: 100px;
 }
 
-button {
-    margin:10px auto;
-    display: block;
-    font-family: 'Slabo 27px', serif;
-    padding: 12px;
-    font-size: 20px;
-    color: #c0ecec;
-    background-color: #51768C;
-    border-radius: 10px;
-    margin-top: -70px;
-
-}
 
 
 /************ BASIC *************/
@@ -159,9 +148,11 @@ p a:hover {
 
 
 footer {
-    margin-top: 45px;
+    margin: auto 30px;
     text-align: center;
     font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .footerimg {
@@ -179,10 +170,13 @@ footer {
 #wrapper {
     position: relative;
     width: 330px;
-    height: 55%;
+    height: 100%;
     margin: 0 auto;
-    margin-top: -80px;
+    margin-top: -200px;
+}
 
+figcaption{
+    margin-bottom:150px;
 }
 
 #round1 {
@@ -463,6 +457,39 @@ footer {
     }
 
 }
+@media only screen and (min-width: 100px){
+
+    #home {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "svg-area svg-area svg-area"
+            ". figure-area ."
+            "footer-area footer-area footer-area"
+    }
+
+
+    svg {
+        grid-area: svg-area;
+    }
+
+
+    figure {
+        grid-area: figure-area;
+
+    }
+
+    footer {
+        grid-area: footer-area;
+    }
+
+    figcaption{
+        margin-top: 430px;
+    }
+
+
+}
+
 
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
@@ -479,7 +506,6 @@ footer {
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-areas:
             "svg-area svg-area svg-area"
-            ". btn-area ."
             ". figure-area ."
             "footer-area footer-area footer-area"
     }
@@ -489,9 +515,6 @@ footer {
         grid-area: svg-area;
     }
 
-    button {
-        grid-area: btn-area;
-    }
 
     figure {
         grid-area: figure-area;
