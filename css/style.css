@@ -55,14 +55,15 @@ nav {
 }
 
 button {
+    margin:10px auto;
+    display: block;
     font-family: 'Slabo 27px', serif;
     padding: 12px;
-    margin-top: 30px;
-    margin-left: 130px;
     font-size: 20px;
     color: #c0ecec;
     background-color: #51768C;
     border-radius: 10px;
+    margin-top: -70px;
 
 }
 
@@ -73,7 +74,8 @@ button {
 
 
 svg {
-    float: inherit;
+    margin:100px auto;
+    display:block;
     stroke: #1f355d;
     stroke-width: 1;
     stroke-dasharray: 1;
@@ -81,9 +83,6 @@ svg {
     animation: fill 4s forwards;
     fill: none;
     width: 300px;
-    margin-top: 95px;
-    margin-left: 45px;
-    align-content: center;
 }
 
 @keyframes fill {
@@ -102,6 +101,8 @@ svg {
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background-image: linear-gradient(rgba(121, 178, 209, 0), rgba(121, 178, 209, 1));
     font-family: 'Slabo 27px', serif;
 }
@@ -121,9 +122,9 @@ h2 {
 }
 
 figcaption {
-
     text-align: right;
     margin-bottom: 0px;
+    margin-top: 400px;
     color: #1f355d;
     font-size: 14px;
 }
@@ -147,9 +148,8 @@ button a {
 }
 
 p a:hover {
+    transition-duration: 0.2s;
     color: #6fbedb;
-    font-size: 20px;
-
 }
 
 .navlist a:hover {
@@ -159,7 +159,7 @@ p a:hover {
 
 
 footer {
-    margin-top: 25px;
+    margin-top: 45px;
     text-align: center;
     font-size: 12px;
 }
@@ -170,18 +170,18 @@ footer {
 }
 
 .footerimg:hover {
-    height: 30px;
+    transform: scale(2);
 }
 
 
 /****************** homepage ******************/
-
 
 #wrapper {
     position: relative;
     width: 330px;
     height: 55%;
     margin: 0 auto;
+    margin-top: -80px;
 
 }
 
@@ -332,14 +332,15 @@ footer {
     font-size: 18px;
     margin-top: 20px;
     color: #000;
-    text-align: center;}
+    text-align: center;
+}
 
-    #h2cv {
+#h2cv {
     clear: both;
     text-align: center;
     color: #1f355d;
-        font-size: 16px;
-    }
+    font-size: 16px;
+}
 
 
 #picturetabea {
@@ -384,6 +385,7 @@ footer {
 }
 
 .basiccard:hover {
+    transition-duration: 1s;
     opacity: 0.7;
 }
 
@@ -472,6 +474,38 @@ footer {
         text-align: center;
     }
 
+    #home {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+            "svg-area svg-area svg-area"
+            ". btn-area ."
+            ". figure-area ."
+            "footer-area footer-area footer-area"
+    }
+
+
+    svg {
+        grid-area: svg-area;
+    }
+
+    button {
+        grid-area: btn-area;
+    }
+
+    figure {
+        grid-area: figure-area;
+
+    }
+
+    footer {
+        grid-area: footer-area;
+    }
+
+    figcaption{
+        margin-top: 430px;
+    }
+
 
     main {
         display: grid;
@@ -482,6 +516,8 @@ footer {
             "main-area main-area"
             "footer-area footer-area"
     }
+
+
 
     h1 {
         grid-area: header-area;
@@ -505,6 +541,40 @@ footer {
     h3 {
         text-align: center;
     }
+
+        #home {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "svg-area svg-area svg-area"
+            ". btn-area ."
+            ". figure-area ."
+            "footer-area footer-area footer-area"
+    }
+
+
+    svg {
+        grid-area: svg-area;
+    }
+
+    button {
+        grid-area: btn-area;
+
+    }
+
+    figure {
+        grid-area: figure-area;
+
+    }
+
+    footer {
+        grid-area: footer-area;
+    }
+
+    figcaption{
+        margin-top: 430px;
+    }
+
 
     main {
         display: grid;
