@@ -7,6 +7,7 @@
     });
 })();
 
+
 let whale = document.querySelector("#whale");
 whale.addEventListener("click", fade);
 
